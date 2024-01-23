@@ -58,3 +58,23 @@ main h2 {
 .button-wrapper .button{
   font-size: 18px;
 }
+
+.populars {
+  margin-bottom: 96px;
+}
+
+.partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 128px;
+
+  margin-bottom: 96px;
+}
+
+.subscriptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

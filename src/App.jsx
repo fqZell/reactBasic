@@ -2,8 +2,10 @@ import Banner from "./components/Banner/Banner"
 import Button from "./components/Button/Button"
 import Card from "./components/Card/Card"
 import Header from "./components/Header/Header"
+import Partner from "./components/Partner/Partner"
 import Slider from "./components/Slider/Slider"
-import { products } from "./data"
+import Subscription from "./components/Subscription/Subscription"
+import { partners, products } from "./data"
 
 
 function App() {
@@ -40,9 +42,29 @@ function App() {
 
           </div>
 
+          <h2>Наши партнёры</h2>
+
+          <div className="partners">
+
+            {partners.map((partner, index) => (
+              <Partner key={index} {...partner} />
+            ))}
+
+          </div>
+
         </main>
 
       </div>
+
+      <footer>
+
+        <div className="subscriptions">  
+
+            <Subscription />
+
+        </div>
+
+      </footer>
     </>
   )
 }

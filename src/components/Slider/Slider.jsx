@@ -8,6 +8,10 @@ import { products } from "../../data"
 
 export default function Slider() {
     const responsiveSettings = {
+        300: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
         500: {
           slidesPerView: 1,
           spaceBetween: 10,
