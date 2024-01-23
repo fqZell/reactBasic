@@ -37,3 +37,24 @@ main h2 {
   font-weight: 700;
   margin: 50px 0;
 }
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 48px 0 96px 0;
+}
+
+.button-wrapper .button{
+  font-size: 18px;
+}

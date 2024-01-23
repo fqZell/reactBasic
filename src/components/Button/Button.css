@@ -10,12 +10,4 @@
     /* color: #333; */
 
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-
-    margin-top: 64px;
-}
-
-.button:hover {
-    /* background-color: #333; */
-    /* color: #f3f3f3; */
 }

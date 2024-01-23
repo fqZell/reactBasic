@@ -1,0 +1,34 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 32px;
+
+    background-color: #fff;
+    padding: 103px;
+    border-radius: 8px;
+
+    position: relative;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card-price {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card .button {
+    font-size: 18px;
+}
+
+.card-favorites {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
