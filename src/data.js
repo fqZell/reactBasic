@@ -41,11 +41,11 @@ export const products = [
 export const partners = [
     {
         id: 1,
-        photo: partners1,
+        photo: partners5,
     },
     {
         id: 2,
-        photo: partners2,
+        photo: partners1,
     },
     {
         id: 3,
@@ -53,11 +53,11 @@ export const partners = [
     },
     {
         id: 4,
-        photo: partners4,
+        photo: partners2,
     },
     {
         id: 5,
-        photo: partners5,
+        photo: partners4,
     },
     {
         id: 6,

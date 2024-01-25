@@ -67,6 +67,7 @@ main h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 
   gap: 128px;
 

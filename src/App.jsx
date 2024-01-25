@@ -4,7 +4,7 @@ import Card from "./components/Card/Card"
 import Header from "./components/Header/Header"
 import Partner from "./components/Partner/Partner"
 import Slider from "./components/Slider/Slider"
-import Subscription from "./components/Subscription/Subscription"
+import Emailchimp from "./components/Subscription/Emailchimp"
 import { partners, products } from "./data"
 
 
@@ -60,7 +60,7 @@ function App() {
 
         <div className="subscriptions">  
 
-            <Subscription />
+              <Emailchimp />
 
         </div>
 
