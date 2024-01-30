@@ -16,7 +16,7 @@ export default function Card({ title, price }) {
 
                 <div className="card-price">{price}</div>
 
-                <Button backgroundColor="black" color="white">
+                <Button>
                     В корзину!
                 </Button>
 

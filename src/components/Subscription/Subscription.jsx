@@ -46,7 +46,7 @@ export default function Subscription({ status, message, onValidated }) {
     
       const clearFields = () => {
         setEmail('');
-      };
+      };    
 
     return (
         <>

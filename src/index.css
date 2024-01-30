@@ -44,7 +44,7 @@ main h2 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 48px;
+  gap: 36px;
 }
 
 .button-wrapper {
@@ -57,10 +57,24 @@ main h2 {
 
 .button-wrapper .button{
   font-size: 18px;
+  background-color: #333;
+  color: #f3f3f3;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.button-wrapper .button:hover {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #333;
 }
 
 .populars {
   margin-bottom: 96px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: #333;
 }
 
 .partners {
@@ -78,4 +92,49 @@ main h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+
+  gap: 64px;
+
+  margin-top: 96px;
+}
+
+.filtered {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  flex-wrap: wrap;
+
+  gap: 24px;
+
+  margin-bottom: 96px;
+}
+
+.catalog-button .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 18px;
+  margin: 36px auto;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+  background-color: #333;
+  color: #f3f3f3;
+}
+
+.catalog-button .button:hover {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #333;
 }

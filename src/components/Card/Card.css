@@ -5,8 +5,11 @@
     text-align: left;
     gap: 32px;
 
+    width: 400px;
+    height: 500px;
+
     background-color: #fff;
-    padding: 103px;
+    padding: 96px;
     border-radius: 8px;
 
     position: relative;
@@ -24,6 +27,16 @@
 
 .card .button {
     font-size: 18px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+    background-color: #333;
+    color: #f3f3f3;
+}
+
+.card .button:hover {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
 }
 
 .card-favorites {

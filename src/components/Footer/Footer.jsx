@@ -1,11 +1,9 @@
-import Logo from "../Logo/Logo";
+import './Footer.css'
 
 // eslint-disable-next-line react/prop-types
 export default function Footer({ title, subtitle, subtitle2, subtitle3 }) {
     return (
         <>
-        
-        <Logo />
 
         <ul className="footer-nav">
             <li>

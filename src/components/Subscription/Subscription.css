@@ -8,7 +8,7 @@
     object-fit: cover;
     object-position: 50% 50%;
 }
-
+  
 .subscription h2 {
     position: absolute;
     top: 35%;
@@ -69,12 +69,18 @@
     padding: 16px;
 
     outline: none;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
 
     font-size: 16px;
     font-weight: 400;
 
     border-radius: 8px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.subscription-content input:hover {
+    border: 2px solid #333;
 }
 
 .subscription-content button {
@@ -90,6 +96,14 @@
 
     border-radius: 8px;
     cursor: pointer;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.subscription-content button:hover {
+    background-color: transparent;
+    border: 1px solid #f3f3f3;
+    color: #f3f3f3;
 }
 
 .subscription-content p{

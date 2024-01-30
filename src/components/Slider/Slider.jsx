@@ -43,13 +43,13 @@ export default function Slider() {
                 <Card {...products[0]} />
               </SwiperSlide>
               <SwiperSlide>
-                <Card {...products[0]} />
+                <Card {...products[1]} />
               </SwiperSlide>
               <SwiperSlide>
-                <Card {...products[0]} />
+                <Card {...products[2]} />
               </SwiperSlide>
               <SwiperSlide>
-                <Card {...products[0]} />
+                <Card {...products[3]} />
               </SwiperSlide>
             </Swiper>
         

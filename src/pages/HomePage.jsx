@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 import Banner from "../components/Banner/Banner"
 import Button from "../components/Button/Button"
 import Card from "../components/Card/Card"
@@ -24,16 +25,20 @@ export default function HomePage() {
             </div>
 
             <div className="button-wrapper">
-            <Button backgroundColor="black" color="white">Каталог</Button>
+            <NavLink to="/catalog"><Button>Каталог</Button></NavLink>
             </div>
 
             <h2>Популярные товары</h2>
 
-            <div className="populars">
+            <section id="populars">
 
-            <Slider />
+                <div className="populars">
 
-            </div>
+                <Slider />
+
+                </div>
+
+            </section>
 
             <h2>Наши партнёры</h2>
 

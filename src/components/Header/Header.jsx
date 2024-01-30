@@ -14,8 +14,8 @@ export default function Header() {
 
                 <nav className="nav">
                     <NavLink to="/catalog"><a href="#">Каталог</a></NavLink>
-                    <a href="#">Популярные товары</a>
-                    <a href="#">Главная</a>
+                    <a href="#populars">Популярные товары</a>
+                    <NavLink to="/"><a href="#">Главная</a></NavLink>
                 </nav>
 
                 <div className="icons">

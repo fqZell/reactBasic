@@ -1,0 +1,36 @@
+.select {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.select select {
+    border: transparent;
+    background-color: transparent;
+    font-size: 15px;
+    outline: none;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    border: 1px solid #333;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.search input {
+    border: transparent;
+    background-color: transparent;
+    outline: none;
+
+    margin-right: 4px;
+
+    width: 200px;
+}

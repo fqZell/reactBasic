@@ -34,9 +34,11 @@
     font-size: 18px;
     padding: 16px 54px;
     transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
 }
 
 .banner-content .button:hover {
-    background-color: #672687;
+    background-color: transparent;
     color: #f3f3f3;
+    border: 1px solid #f3f3f3;
 }
