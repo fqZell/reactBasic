@@ -1,19 +1,46 @@
 import Button from "../components/Button/Button";
 import Card from "../components/Card/Card";
-import Filter from "../components/Filter/Filter";
+// import Filter from "../components/Filter/Filter";
 import { products } from "../data";
 import Footer from "../components/Footer/Footer";
 import { useState } from "react";
-import search from "../../public/icons/search.svg"
+import Filter from "../components/Filter/Filter";
+import Search from "../components/Search/Search";
 
+// eslint-disable-next-line react/prop-types
 export default function Catalog() {
+
+    const [sorting, setSorting] = useState('popular');
+
+    const handleSortingChange = (event) => {
+      setSorting(event.target.value);
+    };
 
     const [query, setQuery] = useState("")
     const onChangeQuery = (event) => {
         setQuery(event.target.value);
     }
 
-    const filterdProducts = products.filter((item) => item.title.toLowerCase().includes(query.toLowerCase()))
+    const filterdProducts = products.filter((item) => 
+        item.title.toLowerCase().includes(query.toLowerCase())
+    )
+
+    const sortProducts = (sorting, products) => {
+        switch (sorting) {
+          case 'price-asc':
+            return [...products].sort((a, b) => a.price.localeCompare(b.price));
+          case 'price-desc':
+            return [...products].sort((a, b) => b.price.localeCompare(a.price));
+          case 'name-asc':
+            return [...products].sort((a, b) => a.title.localeCompare(b.title));
+          case 'name-desc':
+            return [...products].sort((a, b) => b.title.localeCompare(a.title));
+          default:
+            return products;
+        }
+    };
+
+    const sortedAndFilteredProducts = sortProducts(sorting, filterdProducts);
 
     return (
         <>
@@ -21,36 +48,20 @@ export default function Catalog() {
 
             <div className="filtered">
 
-                <Filter />
+                <Filter sorting={sorting} handleSortingChange={handleSortingChange} />
 
-                <div className="search">
-                    <label htmlFor="search"></label>
-                    <input
-                    value={query} type="text" name="search" placeholder="Поиск"
-                    onChange={(e) => onChangeQuery(e)}
-                    
-                    />
-                    <img src={search} alt="search" />
-                </div>
+                <Search query={query} onChangeQuery={onChangeQuery} />
                 
             </div>
 
             <div className="cards">
-                {
-                    // eslint-disable-next-line no-undef
-                    filterdProducts.length ?
-                    // eslint-disable-next-line no-undef
-                    filterdProducts.map((product, index) => {
-                        return (
-                            <Card key={index} {...product} />
-                        )
-                    })
-
-                    :
-
-                    // eslint-disable-next-line no-undef
-                    <h2>По вашему запросу `{query}` ничего не найдено!</h2>
-                }
+            {sortedAndFilteredProducts.length ? (
+                sortedAndFilteredProducts.map((product, index) => (
+                    <Card key={index} {...product} />
+                ))
+                ) : (
+                <h2>По вашему запросу `{query}` ничего не найдено!</h2>
+            )}
             </div>
 
             <div className="catalog-button">
