@@ -1,4 +1,4 @@
-import filter from "/public/icons/filter.svg"
+import filter from "../../../public/icons/filter.svg"
 import "./Filter.css"
 
 // eslint-disable-next-line react/prop-types

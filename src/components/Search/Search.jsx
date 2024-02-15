@@ -1,4 +1,4 @@
-import search from "/public/icons/search.svg";
+import search from "../../../public/icons/search.svg";
 
 // eslint-disable-next-line react/prop-types
 const Search = ({ query, onChangeQuery }) => {
