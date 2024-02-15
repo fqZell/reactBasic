@@ -1,7 +1,7 @@
 import Button from "../Button/Button"
 import photo from '/public/product/product.jpg'
 import favoritesCard from '/public/icons/favoritesCard.svg'
-import 'src/components/Card/card.css'
+import './card.css'
 // eslint-disable-next-line react/prop-types
 export default function Card({ id, title, price }) {
     return (
