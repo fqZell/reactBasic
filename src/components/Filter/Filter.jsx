@@ -1,5 +1,5 @@
 import filter from "/public/icons/filter.svg"
-import "/Filter.css"
+import "./Filter.css"
 
 // eslint-disable-next-line react/prop-types
 const Filter = ({ sorting, handleSortingChange }) => {

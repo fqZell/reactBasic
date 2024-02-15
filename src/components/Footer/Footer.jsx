@@ -1,4 +1,4 @@
-import '/Footer.css'
+import './Footer.css'
 
 // eslint-disable-next-line react/prop-types
 export default function Footer({ title, subtitle, subtitle2, subtitle3 }) {
