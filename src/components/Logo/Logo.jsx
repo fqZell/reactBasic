@@ -8,7 +8,7 @@ export default function Logo() {
         <NavLink to="/">
             <div className="logo">
                 <img src={logo} alt="logo" />
-                <a href="#">clothes</a>
+                <p>clothes</p>
             </div>
         </NavLink>
         

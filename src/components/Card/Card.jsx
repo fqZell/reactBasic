@@ -2,14 +2,12 @@ import Button from "../Button/Button"
 import photo from '../../../public/product/product.jpg'
 import favoritesCard from '../../../public/icons/favoritesCard.svg'
 import './card.css'
-import { NavLink } from "react-router-dom"
-
 // eslint-disable-next-line react/prop-types
 export default function Card({ id, title, price }) {
     return (
         <>
         
-            <NavLink to={`${id}`}>
+            <a href={`/catalog/${id}`}>
                 <div className="card">
 
                     <img src={photo} alt="card" />
@@ -27,7 +25,7 @@ export default function Card({ id, title, price }) {
                     </div>
 
                 </div>
-            </NavLink>
+            </a>
         
         </>
     )

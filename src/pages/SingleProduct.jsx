@@ -1,5 +1,7 @@
-import { useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { products } from '../data';
+import Back from "../../public/icons/back.svg"
+import '../index.css'
 
 // eslint-disable-next-line react/prop-types
 const ProductPage = () => {
@@ -12,10 +14,18 @@ const ProductPage = () => {
   }
 
   return (
-    <div>
+
+    <>
+    <NavLink to="/">
+        <div className="arrowBack">
+            <img src={Back} alt="back" />
+        </div>
+        <p>Назад</p>
+    </NavLink>
+
       <h2>{product.title}</h2>
       <p>{product.price}</p>
-    </div>
+    </>
   );
 };
 

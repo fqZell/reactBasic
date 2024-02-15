@@ -18,9 +18,9 @@ export default function HomePage() {
 
             <div className="cards">
 
-            {products.map((product, index) => (
-            <Card key={index} {...product} />
-            ))}
+                <Card {...products[0]} />
+                <Card {...products[1]} />
+                <Card {...products[2]} />
 
             </div>
 

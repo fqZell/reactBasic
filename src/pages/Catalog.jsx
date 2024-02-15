@@ -1,6 +1,4 @@
-import Button from "../components/Button/Button";
 import Card from "../components/Card/Card";
-// import Filter from "../components/Filter/Filter";
 import { products } from "../data";
 import Footer from "../components/Footer/Footer";
 import { useState } from "react";
@@ -10,13 +8,13 @@ import Search from "../components/Search/Search";
 // eslint-disable-next-line react/prop-types
 export default function Catalog() {
 
-    const [sorting, setSorting] = useState('popular');
+    const [sorting, setSorting] = useState('popular')
+    const [query, setQuery] = useState("")
 
     const handleSortingChange = (event) => {
       setSorting(event.target.value);
     };
 
-    const [query, setQuery] = useState("")
     const onChangeQuery = (event) => {
         setQuery(event.target.value);
     }
@@ -62,12 +60,6 @@ export default function Catalog() {
                 ) : (
                 <h2>По вашему запросу `{query}` ничего не найдено!</h2>
             )}
-            </div>
-
-            <div className="catalog-button">
-                <Button>
-                    Показать еще
-                </Button>
             </div>
 
             <Footer />
