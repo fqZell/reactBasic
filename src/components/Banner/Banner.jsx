@@ -1,4 +1,4 @@
-import './Banner.css'
+import 'Banner.css'
 import bannerPhoto from '/public/banner/Banner.jpg'
 import Button from '../Button/Button'
 import { NavLink } from 'react-router-dom'

@@ -1,4 +1,4 @@
-import './ModalContent.css'
+import '/ModalContent.css'
 
 // eslint-disable-next-line react/prop-types
 export default function ModalContent({ closeModal }) {
