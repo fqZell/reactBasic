@@ -1,5 +1,5 @@
-import basket from '../../../public/icons/basket.svg'
-import user from '../../../public/icons/user.svg'
+import basket from '/public/icons/basket.svg'
+import user from '/public/icons/user.svg'
 import favorites from '/public/icons/favorites.svg'
 import './Header.css'
 import Logo from '../Logo/Logo'

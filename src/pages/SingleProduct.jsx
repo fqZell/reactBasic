@@ -1,6 +1,6 @@
 import { NavLink, useParams } from 'react-router-dom';
 import { products } from '../data';
-import Back from "../../public/icons/back.svg"
+import Back from "/public/icons/back.svg"
 import '../index.css'
 
 // eslint-disable-next-line react/prop-types
