@@ -9,32 +9,32 @@ export const products = [
     {
         id: 1,
         title: 'Крутая чёрная футболка',
-        price: '1 999Р'
+        price: 1999
     },
     {
         id: 2,
         title: 'Крутая чёрная белая',
-        price: '1 998Р'
+        price: 1998
     },
     {
         id: 3,
         title: 'Крутая чёрная красная',
-        price: '1 997Р'
+        price: 1997
     },
     {
         id: 4,
         title: 'Крутая чёрная синяя',
-        price: '1 996Р'
+        price: 1996
     },
     {
         id: 5,
         title: 'Крутая чёрная фиолетоваяа',
-        price: '1 995Р'
+        price: 1995
     },
     {
         id: 6,
         title: 'Крутая чёрная жёлтая',
-        price: '1 994Р'
+        price: 1994
     },
 ]
 

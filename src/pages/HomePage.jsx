@@ -6,10 +6,12 @@ import Partner from "../components/Partner/Partner"
 import Slider from "../components/Slider/Slider"
 import Emailchimp from "../components/Subscription/Emailchimp"
 import { partners, products } from "../data"
+import Header from "../components/Header/Header"
 
 export default function HomePage() {
     return (
         <>
+        <Header />
         <main>
 
             <Banner />

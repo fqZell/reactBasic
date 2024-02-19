@@ -1,5 +1,6 @@
+/* eslint-disable no-undef */
 import { useEffect } from "react"
-import Header from "../components/Header/Header"
+// import Header from "../components/Header/Header"
 import { Outlet } from "react-router-dom"
 import Footer from "../components/Footer/Footer"
 import { footerNav } from "../data"
@@ -19,7 +20,7 @@ const Root = () => {
         
         <div className='container'>
 
-            <Header />
+            {/* <Header cartItems={cartItems}/> */}
             <Outlet />
             <footer className="footer">
 

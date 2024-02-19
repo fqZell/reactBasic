@@ -4,12 +4,15 @@ import Footer from "../components/Footer/Footer";
 import { useState } from "react";
 import Filter from "../components/Filter/Filter";
 import Search from "../components/Search/Search";
-
+import ModalContent from "../components/Modal/ModalContent";
+import Header from "../components/Header/Header";
 // eslint-disable-next-line react/prop-types
 export default function Catalog() {
 
     const [sorting, setSorting] = useState('popular')
     const [query, setQuery] = useState("")
+    const [cartItems, setCartItems] = useState([]);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const handleSortingChange = (event) => {
       setSorting(event.target.value);
@@ -40,8 +43,35 @@ export default function Catalog() {
 
     const sortedAndFilteredProducts = sortProducts(sorting, filterdProducts);
 
+    const addToCart = (productId) => {
+      const existingItem = cartItems.find(item => item.id === productId);
+    
+      if (existingItem) {
+        setCartItems(cartItems.map(item => {
+          if (item.id === productId) {
+            return { ...item, quantity: item.quantity + 1 };
+          }
+          return item;
+        }));
+      } else {
+        const productToAdd = products.find(product => product.id === productId);
+        setCartItems([...cartItems, { ...productToAdd, quantity: 1 }]);
+      }
+    };
+
+  const openModal = () => {
+      setModalIsOpen(true);
+      document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+      setModalIsOpen(false);
+      document.body.style.overflow = 'auto';
+  };
+
     return (
         <>
+          <Header cartItems={cartItems} openModal={openModal}/>
             <h1>Каталог</h1>
 
             <div className="filtered">
@@ -55,12 +85,14 @@ export default function Catalog() {
             <div className="cards">
             {sortedAndFilteredProducts.length ? (
                 sortedAndFilteredProducts.map((product, index) => (
-                    <Card key={index} {...product} />
+                    <Card key={index} {...product} addToCart={addToCart} />
                 ))
                 ) : (
                 <h2>По вашему запросу `{query}` ничего не найдено!</h2>
             )}
             </div>
+
+            <ModalContent closeModal={closeModal} cartItems={cartItems} modalIsOpen={modalIsOpen}/>
 
             <Footer />
         </>
